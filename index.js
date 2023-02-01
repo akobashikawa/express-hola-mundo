@@ -10,6 +10,15 @@ app.set('views', './views');
 // Definir ruta para mostrar el mensaje
 app.get('/hola-mundo', (req, res) => {
     // res.send("Hola Mundo");
+    // res.render('hola-mundo');
+    res.json({
+        mensaje: 'Hola Mundo'
+    });
+});
+
+// Definir ruta para mostrar el mensaje
+app.get('/hola-mundo', (req, res) => {
+    // res.send("Hola Mundo");
     res.render('hola-mundo');
 });
 

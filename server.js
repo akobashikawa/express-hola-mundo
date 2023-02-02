@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 
 // use env variable to define tcp/ip port with a default
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');

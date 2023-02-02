@@ -4,6 +4,9 @@ const express = require('express');
 // Crear instancia de la aplicación Express
 const app = express();
 
+// use env variable to define tcp/ip port with a default
+const PORT = process.env.PORT || 8080
+
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -24,4 +27,4 @@ app.get('/hola-mundo', (req, res) => {
 });
 
  // Escuchar peticiones en el puerto especificado
-app.listen(3000, () => {   console.log('Servidor iniciado en puerto 3000: http://localhost:3000'); });
+app.listen(3000, () => {   console.log(`Servidor iniciado en puerto ${PORT}`); });
